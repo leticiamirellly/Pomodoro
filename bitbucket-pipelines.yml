@@ -1,0 +1,16 @@
+pipelines:
+  branches: 
+    master:
+      - step:
+          name: 'Build and test the app'
+          image: node:latest
+          script:
+            - npm install
+            - npm run build
+    dev:
+      - step:
+          name: 'Build and test the app'
+          image: node:latest
+          script:
+            - npm install
+            - npm run build
